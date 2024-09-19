@@ -3,6 +3,6 @@
 #### Todos
 
 - [] Add vscode theme properties
-- [] Add zed theme properties
+- [x] Add zed theme properties
 - [] Remove comments in json file
 - [] Proper schema mapping
