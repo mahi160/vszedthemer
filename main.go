@@ -31,6 +31,7 @@ func convertTheme(vsCodeThemeFile string) (models.ZedTheme, error) {
 		Name:       vsCodeTheme.Name,
 		Appearance: vsCodeTheme.Type,
 		Style: models.ZedThemeStyle{
+			ScrollbarThumbBackground:  vsCodeTheme.Colors.ScrollbarSliderBackground,
 			TerminalAnsiBlack:         vsCodeTheme.Colors.TerminalAnsiBlack,
 			TerminalAnsiBlue:          vsCodeTheme.Colors.TerminalAnsiBlue,
 			TerminalAnsiBrightBlack:   vsCodeTheme.Colors.TerminalAnsiBrightBlack,
@@ -57,7 +58,7 @@ func convertTheme(vsCodeThemeFile string) (models.ZedTheme, error) {
 
 func main() {
 	rootCmd := &cobra.Command{
-		Use:   "vscode2zed",
+		Use:   "vszedthemer",
 		Short: "Converts VS Code themes to Zed themes",
 		Long:  "Converts VS Code themes to Zed themes",
 	}
